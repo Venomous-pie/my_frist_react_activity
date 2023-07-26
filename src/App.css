@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+@font-face {
+  font-family: "MyNerve";
+  src: local('Mynerve-Regular'), 
+    url('./Fonts/Mynerve-Regular.ttf') format("truetype");
+
+  font-family: "Indie";
+  src: local('IndieFlower-Regular'), 
+    url('./Fonts/IndieFlower-Regular.ttf') format("truetype");
+  font-family: "Poppins";
+  src: local('Poppins-Light'), 
+    url('./Fonts/Poppins-Light.ttf') format("truetype");
+  }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

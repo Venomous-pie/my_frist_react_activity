@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import './Fonts/Mynerve-Regular.ttf'
+import './Fonts/IndieFlower-Regular.ttf'
+import './Fonts/Poppins-Light.ttf'
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/Home'
+import AboutPage from './Pages/About'
+import ContactPage from './Pages/Contact'
+import BlogPage from './Pages/Blog'
+import SentPage from './Pages/Sent'
+import Rootlayout from './Layout/Rootlayout'
+import Blanklayout from './Layout/Blanklayout'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route element={<Rootlayout/>}>
+          <Route path = '/home' element={<HomePage />}></Route>
+          <Route path='/about' element={<AboutPage />}></Route>
+          <Route path='/contact' element={<ContactPage/>}></Route>
+          <Route path='/blog' element={<BlogPage/>}></Route>
+        </Route>
+
+        <Route element={<Blanklayout/>}>
+          <Route path='/sent' element={<SentPage/>}></Route>
+        </Route>
+      </Routes>
   );
 }
 
